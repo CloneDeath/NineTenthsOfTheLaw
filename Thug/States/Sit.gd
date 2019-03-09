@@ -1,17 +1,17 @@
 extends State
 
-func on_enter(player):
-	player.set_animation("Sit");
-	player.velocity.x = 0;
+func on_enter(entity):
+	entity.set_animation("Sit");
+	entity.velocity.x = 0;
 
-func update(player, _delta):
-	var input = player.input;
+func update(entity, _delta):
+	var input = entity.input;
 	if (input.Jump):
-		player.allow_fall_through(true);
+		entity.allow_fall_through(true);
 
-func get_next_state(enemy):
-	var input = enemy.input;
-	if (!enemy.is_on_floor()):
+func get_next_state(entity):
+	var input = entity.input;
+	if (!entity.is_on_floor()):
 		return "InAir";
 	if (!input.Sit):
 		return "Crouch";

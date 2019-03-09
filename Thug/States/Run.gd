@@ -2,16 +2,16 @@ extends State
 
 const run_speed = 48;
 
-func update(player, _delta):
-	var input = player.input;
+func update(entity, _delta):
+	var input = entity.input;
 	var velocity = (int(input.Right)-int(input.Left));
-	player.velocity.x = velocity * run_speed;
-	player.set_animation("Run");
-	player.update_facing();
+	entity.velocity.x = velocity * run_speed;
+	entity.set_animation("Run");
+	entity.update_facing();
 
-func get_next_state(player):
-	var input = player.input;
-	if (!player.is_on_floor()):
+func get_next_state(entity):
+	var input = entity.input;
+	if (!entity.is_on_floor()):
 		return "InAir";
 	if (input.Crouch):
 		return "Crouch";

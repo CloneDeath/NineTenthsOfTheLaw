@@ -1,13 +1,13 @@
 extends State
 
-func update(player, _delta):
-	player.velocity.x = 0;
-	player.set_animation("Idle");
-	player.update_facing();
+func update(entity, _delta):
+	entity.velocity.x = 0;
+	entity.set_animation("Idle");
+	entity.update_facing();
 
-func get_next_state(player):
-	var input = player.input;
-	if (!player.is_on_floor()):
+func get_next_state(entity):
+	var input = entity.input;
+	if (!entity.is_on_floor()):
 		return "InAir";
 	if (input.Crouch || input.Sit):
 		return "Crouch";
