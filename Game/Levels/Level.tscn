@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Environment/OldHouse/Tiles/OldHouse.tscn" type="PackedScene" id=2]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116, 59 )
+
+[node name="OldHouse" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 851968, 1, 0, 851969, 0, 0, 851970, 1, 0, 851971, 0, 0, 851972, 1, 0, 851973, 0, 0, 851974, 1, 0, 851975, 0, 0, 851976, 1, 0, 851977, 0, 0, 851978, 1, 0, 851979, 0, 0, 851980, 1, 0, 851981, 0, 0, 851982, 1, 0, 851983, 0, 0, 851984, 1, 0, 851985, 0, 0, 851986, 1, 0, 851987, 0, 0, 851988, 1, 0, 851989, 0, 0, 851990, 1, 0, 851991, 0, 0, 851992, 1, 0, 851993, 0, 0, 851994, 1, 0, 851995, 0, 0, 851996, 1, 0, 851997, 0, 0, 851998, 1, 0, 851999, 0, 0 )
+
