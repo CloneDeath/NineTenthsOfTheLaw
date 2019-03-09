@@ -1,13 +1,13 @@
 extends Node2D
 
-func _process(delta):
+func _process(_delta):
 	move_detector();
-	update_visuals(delta);
+	update_visuals();
 
 func get_open_amount():
 	return clamp($PlayerDetector.position.x - 4, -18, 18);
 
-func update_visuals(delta):
+func update_visuals():
 	$Door.scale.x = get_open_amount() / 18.0;
 
 func move_detector():
