@@ -17,7 +17,7 @@ func update_physics(delta):
 		velocity.y += up_gravity * delta;
 	else:
 		velocity.y += down_gravity * delta;
-	velocity = self.move_and_slide(velocity, Vector2(0, -1));
+	velocity = self.move_and_slide(velocity, Vector2(0, -1), false, 40);
 	if (is_on_floor()):
 		var friction = pow(0.1, delta);
 		velocity.x = velocity.x * friction;
