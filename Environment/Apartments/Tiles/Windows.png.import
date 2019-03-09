@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpiderWeb.png-bc5bb717c94f875d7e71b5ad31f581c3.stex"
+path="res://.import/Windows.png-fcc6d40cef794c9094f990d4c031587d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/SpiderWeb.png"
-dest_files=[ "res://.import/SpiderWeb.png-bc5bb717c94f875d7e71b5ad31f581c3.stex" ]
+source_file="res://Environment/Apartments/Tiles/Windows.png"
+dest_files=[ "res://.import/Windows.png-fcc6d40cef794c9094f990d4c031587d.stex" ]
 
 [params]
 

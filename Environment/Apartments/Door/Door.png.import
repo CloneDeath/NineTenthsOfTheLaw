@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FallThroughFloor.png-96e2c20ae580d7db358a76a77beef3f4.stex"
+path="res://.import/Door.png-2f279742c8dfd45049a4ebd4d8a92bc4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/FallThroughFloor.png"
-dest_files=[ "res://.import/FallThroughFloor.png-96e2c20ae580d7db358a76a77beef3f4.stex" ]
+source_file="res://Environment/Apartments/Door/Door.png"
+dest_files=[ "res://.import/Door.png-2f279742c8dfd45049a4ebd4d8a92bc4.stex" ]
 
 [params]
 

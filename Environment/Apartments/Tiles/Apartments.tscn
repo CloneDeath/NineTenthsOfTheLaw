@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Environment/OldHouse/Tiles/Supports.png" type="Texture" id=1]
-[ext_resource path="res://Environment/OldHouse/Tiles/SpiderWeb.png" type="Texture" id=2]
-[ext_resource path="res://Environment/OldHouse/Tiles/Windows.png" type="Texture" id=3]
-[ext_resource path="res://Environment/OldHouse/Tiles/WoodFloor.png" type="Texture" id=4]
-[ext_resource path="res://Environment/OldHouse/Tiles/Dirt.png" type="Texture" id=5]
+[ext_resource path="res://Environment/Apartments/Tiles/Supports.png" type="Texture" id=1]
+[ext_resource path="res://Environment/Apartments/Tiles/SpiderWeb.png" type="Texture" id=2]
+[ext_resource path="res://Environment/Apartments/Tiles/Windows.png" type="Texture" id=3]
+[ext_resource path="res://Environment/Apartments/Tiles/WoodFloor.png" type="Texture" id=4]
+[ext_resource path="res://Environment/Apartments/Tiles/Dirt.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 2, 8, 2, 8, 6, 0, 6 )
@@ -21,16 +21,16 @@ points = PoolVector2Array( 2, 2, 6, 2, 6, 8, 2, 8 )
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 2, 0, 6, 0, 6, 8, 2, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 2, 8, 8, 2, 8, 6, 6, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 2, 0, 6, 0, 0, 6, 0, 2 )
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 2, 2, 2, 2, 0, 6, 0, 6, 2, 8, 2, 8, 6, 0, 6 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 2, 8, 2, 8, 6, 6, 6, 6, 8, 2, 8, 2, 6, 0, 6 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
@@ -130,25 +130,25 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 "autotile_coord": Vector2( 7, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 14 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -187,7 +187,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 7/z_index = 0
 
-[node name="OldHouse" type="TileMap"]
+[node name="Apartments" type="TileMap"]
 tile_set = SubResource( 13 )
 cell_size = Vector2( 8, 8 )
 format = 1

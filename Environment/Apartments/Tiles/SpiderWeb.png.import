@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Door.png-c1b3d3c8d89d5c039545574968c86e9b.stex"
+path="res://.import/SpiderWeb.png-39175b0bdd29e8cbbe9000df873f39ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Door/Door.png"
-dest_files=[ "res://.import/Door.png-c1b3d3c8d89d5c039545574968c86e9b.stex" ]
+source_file="res://Environment/Apartments/Tiles/SpiderWeb.png"
+dest_files=[ "res://.import/SpiderWeb.png-39175b0bdd29e8cbbe9000df873f39ef.stex" ]
 
 [params]
 

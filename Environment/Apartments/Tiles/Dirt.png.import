@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Windows.png-da42a100885a2fbbda2b931a38502778.stex"
+path="res://.import/Dirt.png-358c1e3241aa6844d9db2eacdf9a1f3e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/Windows.png"
-dest_files=[ "res://.import/Windows.png-da42a100885a2fbbda2b931a38502778.stex" ]
+source_file="res://Environment/Apartments/Tiles/Dirt.png"
+dest_files=[ "res://.import/Dirt.png-358c1e3241aa6844d9db2eacdf9a1f3e.stex" ]
 
 [params]
 

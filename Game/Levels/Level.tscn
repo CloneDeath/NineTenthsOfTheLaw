@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Environment/Outside/Tiles/Outside.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Environment/OldHouse/Tiles/FallThroughFloor.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Environment/OldHouse/Tiles/OldHouse.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Environment/OldHouse/Door/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Environment/Apartments/Tiles/FallThroughFloor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Environment/Apartments/Tiles/Apartments.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Environment/Apartments/Door/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Environment/Outside/Car/Car.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Thug/Thug.tscn" type="PackedScene" id=7]

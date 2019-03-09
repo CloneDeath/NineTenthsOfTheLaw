@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dirt.png-a815463cdbcb521f9ec65e80863323aa.stex"
+path="res://.import/WoodFloor.png-7614e837d792d001f280a92f59d7bf55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/Dirt.png"
-dest_files=[ "res://.import/Dirt.png-a815463cdbcb521f9ec65e80863323aa.stex" ]
+source_file="res://Environment/Apartments/Tiles/WoodFloor.png"
+dest_files=[ "res://.import/WoodFloor.png-7614e837d792d001f280a92f59d7bf55.stex" ]
 
 [params]
 

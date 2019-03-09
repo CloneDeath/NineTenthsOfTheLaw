@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WoodFloor.png-a5875322d680bc2521a3d29db835fde2.stex"
+path="res://.import/FallThroughFloor.png-209c08724f591754ce197175c0401aae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/WoodFloor.png"
-dest_files=[ "res://.import/WoodFloor.png-a5875322d680bc2521a3d29db835fde2.stex" ]
+source_file="res://Environment/Apartments/Tiles/FallThroughFloor.png"
+dest_files=[ "res://.import/FallThroughFloor.png-209c08724f591754ce197175c0401aae.stex" ]
 
 [params]
 

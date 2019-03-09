@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Supports.png-9c9176fa06f0bae2de6eb7be90430884.stex"
+path="res://.import/Supports.png-d9f3c94d536746c80d4164a43f06399f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/OldHouse/Tiles/Supports.png"
-dest_files=[ "res://.import/Supports.png-9c9176fa06f0bae2de6eb7be90430884.stex" ]
+source_file="res://Environment/Apartments/Tiles/Supports.png"
+dest_files=[ "res://.import/Supports.png-d9f3c94d536746c80d4164a43f06399f.stex" ]
 
 [params]
 
