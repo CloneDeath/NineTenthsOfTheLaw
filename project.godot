@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "AIInput",
+"language": "GDScript",
+"path": "res://Thug/AIInput.gd"
+}, {
+"base": "Node",
 "class": "PlayerInput",
 "language": "GDScript",
 "path": "res://Player/PlayerInput.gd"
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Engine/StateMachine/StateMachine.gd"
 } ]
 _global_script_class_icons={
+"AIInput": "",
 "PlayerInput": "",
 "State": "",
 "StateMachine": ""
