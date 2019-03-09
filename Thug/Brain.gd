@@ -15,6 +15,6 @@ func _ready():
 func can_see_player():
 	pass
 	
-func can_head_player():
+func can_hear_player():
 	pass
 	
