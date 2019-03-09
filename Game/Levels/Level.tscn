@@ -6,6 +6,7 @@
 [ext_resource path="res://Environment/OldHouse/Door/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Environment/Outside/Car/Car.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Thug/Thug.tscn" type="PackedScene" id=7]
 
 [node name="Level" type="Node2D"]
 
@@ -52,4 +53,17 @@ drag_margin_right = 0.1
 drag_margin_bottom = 0.1
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="Thug" parent="." instance=ExtResource( 7 )]
+position = Vector2( 82.2646, 100.806 )
+starting_state = 3
+
+[node name="Thug2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120.296, 100.941 )
+starting_direction = -1
+starting_state = 3
+
+[node name="Thug3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -134.435, 117.161 )
+starting_direction = -1
 
