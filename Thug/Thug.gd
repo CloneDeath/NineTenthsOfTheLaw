@@ -7,12 +7,14 @@ var down_gravity = 200;
 var facing = 1;
 
 var input = AIInput.new();
+onready var brain = get_node("Brain")
 export(int) var starting_direction = 1;
 export(int) var starting_state = input.SIT;
 
 func _ready():
 	input.State = starting_state
 	facing = starting_direction
+	brain.setup(self);
 
 func _physics_process(delta):
 	input.update(delta);
