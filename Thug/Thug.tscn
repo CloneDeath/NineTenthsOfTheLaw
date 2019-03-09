@@ -1,15 +1,16 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Thug/Thug.gd" type="Script" id=1]
-[ext_resource path="res://Engine/StateMachine/StateMachine.gd" type="Script" id=2]
-[ext_resource path="res://Thug/States/Idle.gd" type="Script" id=3]
-[ext_resource path="res://Thug/States/Attack.gd" type="Script" id=4]
-[ext_resource path="res://Thug/States/Crouch.gd" type="Script" id=5]
-[ext_resource path="res://Thug/States/Damaged.gd" type="Script" id=6]
-[ext_resource path="res://Thug/States/InAir.gd" type="Script" id=7]
-[ext_resource path="res://Thug/States/Run.gd" type="Script" id=8]
-[ext_resource path="res://Thug/States/Sit.gd" type="Script" id=9]
-[ext_resource path="res://Thug/Brain.gd" type="Script" id=10]
+[ext_resource path="res://Thug/Thug.png" type="Texture" id=2]
+[ext_resource path="res://Engine/StateMachine/StateMachine.gd" type="Script" id=3]
+[ext_resource path="res://Thug/States/Idle.gd" type="Script" id=4]
+[ext_resource path="res://Thug/States/Attack.gd" type="Script" id=5]
+[ext_resource path="res://Thug/States/Crouch.gd" type="Script" id=6]
+[ext_resource path="res://Thug/States/Damaged.gd" type="Script" id=7]
+[ext_resource path="res://Thug/States/InAir.gd" type="Script" id=8]
+[ext_resource path="res://Thug/States/Run.gd" type="Script" id=9]
+[ext_resource path="res://Thug/States/Sit.gd" type="Script" id=10]
+[ext_resource path="res://Thug/Brain.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 13 )
@@ -17,10 +18,7 @@ extents = Vector2( 5, 13 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5, 3 )
 
-[sub_resource type="StreamTexture" id=3]
-load_path = "res://.import/Thug.png-91236a3d7da6db288e756fd819630b46.stex"
-
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Attack"
 length = 0.6
 step = 0.05
@@ -37,7 +35,7 @@ tracks/0/keys = {
 "values": [ 2, 7, 6, 7, 8, 9, 8 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "Crouch"
 length = 0.1
 tracks/0/type = "value"
@@ -53,7 +51,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "Idle"
 length = 0.1
 tracks/0/type = "value"
@@ -69,7 +67,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "InAir"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -84,7 +82,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "Jump"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -99,7 +97,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "Run"
 length = 0.35
 loop = true
@@ -116,7 +114,7 @@ tracks/0/keys = {
 "values": [ 3, 4, 5, 4 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 resource_name = "Sit"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -130,6 +128,15 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 25, 25 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 50, 25 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8, 13 )
 
 [node name="Thug" type="KinematicBody2D"]
 collision_layer = 4
@@ -149,44 +156,75 @@ shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -15 )
-texture = SubResource( 3 )
+texture = ExtResource( 2 )
 flip_h = true
 hframes = 10
+frame = 8
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/Attack = SubResource( 4 )
-anims/Crouch = SubResource( 5 )
-anims/Idle = SubResource( 6 )
-anims/InAir = SubResource( 7 )
-anims/Jump = SubResource( 8 )
-anims/Run = SubResource( 9 )
-anims/Sit = SubResource( 10 )
+anims/Attack = SubResource( 3 )
+anims/Crouch = SubResource( 4 )
+anims/Idle = SubResource( 5 )
+anims/InAir = SubResource( 6 )
+anims/Jump = SubResource( 7 )
+anims/Run = SubResource( 8 )
+anims/Sit = SubResource( 9 )
 
 [node name="StateMachine" type="Node" parent="."]
 editor/display_folded = true
-script = ExtResource( 2 )
-
-[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 3 )
 
-[node name="Attack" type="Node" parent="StateMachine"]
+[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 4 )
 
-[node name="Crouch" type="Node" parent="StateMachine"]
+[node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
 
-[node name="Damaged" type="Node" parent="StateMachine"]
+[node name="Crouch" type="Node" parent="StateMachine"]
 script = ExtResource( 6 )
 
-[node name="InAir" type="Node" parent="StateMachine"]
+[node name="Damaged" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
 
-[node name="Run" type="Node" parent="StateMachine"]
+[node name="InAir" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
 
-[node name="Sit" type="Node" parent="StateMachine"]
+[node name="Run" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
 
-[node name="Brain" type="Node" parent="."]
+[node name="Sit" type="Node" parent="StateMachine"]
 script = ExtResource( 10 )
 
+[node name="Brain" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="HearingDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HearingDetector"]
+position = Vector2( -25, -25 )
+shape = SubResource( 10 )
+
+[node name="VisionDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionDetector"]
+position = Vector2( 50, -25 )
+shape = SubResource( 11 )
+
+[node name="AttackRangeDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRangeDetector"]
+position = Vector2( 8, -13 )
+shape = SubResource( 12 )
+
+[connection signal="body_entered" from="HearingDetector" to="Brain" method="_on_HearingDetector_body_entered"]
+[connection signal="body_exited" from="HearingDetector" to="Brain" method="_on_HearingDetector_body_exited"]
+[connection signal="body_entered" from="VisionDetector" to="Brain" method="_on_VisionDetector_body_entered"]
+[connection signal="body_exited" from="VisionDetector" to="Brain" method="_on_VisionDetector_body_exited"]
+[connection signal="body_entered" from="AttackRangeDetector" to="Brain" method="_on_AttackRangeDetector_body_entered"]
+[connection signal="body_exited" from="AttackRangeDetector" to="Brain" method="_on_AttackRangeDetector_body_exited"]

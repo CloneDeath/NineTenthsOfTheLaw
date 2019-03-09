@@ -9,7 +9,7 @@ var facing = 1;
 var input = AIInput.new();
 onready var brain = get_node("Brain")
 export(int) var starting_direction = 1;
-export(int) var starting_state = input.SIT;
+export(int) var starting_state = 6;
 
 func _ready():
 	input.State = starting_state
@@ -48,6 +48,9 @@ func update_facing():
 	if (input.Left != input.Right):
 		facing = 1 if input.Right else -1;
 	$Sprite.scale.x = facing;
+	$HearingDetector.scale.x = facing;
+	$VisionDetector.scale.x = facing;
+	$AttackRangeDetector.scale.x = facing;
 
 func do_jump():
 	velocity.y = -jump_speed;
