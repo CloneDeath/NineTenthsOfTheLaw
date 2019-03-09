@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="NineTenthsOfTheLaw"
+config/name="Nine Tenths of the Law"
 run/main_scene="res://Game/Levels/Level.tscn"
 config/icon="res://icon.png"
 
