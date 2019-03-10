@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Nine Tenths of the Law"
-run/main_scene="res://Game/Levels/Level.tscn"
+run/main_scene="res://Game/Apartments/Apartments.tscn"
 config/icon="res://icon.png"
 
 [display]
