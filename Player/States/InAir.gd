@@ -20,6 +20,4 @@ func get_next_state(player):
 		if (input.Crouch):
 			return "Crouch";
 		return "Idle";
-	if (input.Attack):
-		return "Attack";
 	return null;

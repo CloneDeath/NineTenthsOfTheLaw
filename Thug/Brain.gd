@@ -12,7 +12,7 @@ func setup(entity):
 	body = entity;
 	default_state = body.input.State
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	make_decision()
 
 func make_decision():
@@ -27,7 +27,7 @@ func make_decision():
 			body.input.set_state(body.input.LEFT)
 	else:
 		body.input.set_state(default_state)
-	
+
 func turn_toward_player():
 	var relative_position = player.global_position.x - body.global_position.x 
 	if (relative_position > 0):

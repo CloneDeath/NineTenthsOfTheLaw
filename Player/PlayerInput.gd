@@ -28,6 +28,10 @@ var _jump_threshold = 0.1;
 var Jump setget ,get_jump;
 func get_jump(): return Input.is_action_pressed("move_jump") && _jump_time < _jump_threshold;
 
+#warning-ignore:unused_class_variable
+var Aim setget ,get_aim;
+func get_aim(): return Input.is_action_just_pressed("aim");
+
 func update(delta):
 	if (Input.is_action_pressed("move_jump")):
 		self._jump_time += delta;

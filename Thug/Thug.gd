@@ -5,6 +5,7 @@ var jump_speed = 175;
 var up_gravity = 400;
 var down_gravity = 200;
 var facing = 1;
+var health = 3;
 
 var input = AIInput.new();
 export(int) var starting_direction = 1;
@@ -54,3 +55,9 @@ func update_facing():
 
 func do_jump():
 	velocity.y = -jump_speed;
+
+func damage():
+	$StateMachine.transition_to_state("Damaged");
+	health -= 1;
+	if (health <= 0):
+		self.queue_free();
