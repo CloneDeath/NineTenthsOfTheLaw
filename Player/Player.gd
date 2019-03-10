@@ -43,3 +43,11 @@ func update_facing():
 
 func do_jump():
 	velocity.y = -jump_speed;
+
+func do_attack():
+	var results = $Sprite/EnemyDetector.get_overlapping_bodies();
+	for body in results:
+		if (body.is_in_group("enemy")):
+			if (body.has_method("damage")):
+				body.damage();
+				return;

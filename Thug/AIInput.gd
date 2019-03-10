@@ -8,6 +8,7 @@ var CROUCH = 2
 var SIT = 3
 var JUMP = 4
 var ATTACK = 5
+#warning-ignore:unused_class_variable
 var IDLE = 6
 
 var State = SIT

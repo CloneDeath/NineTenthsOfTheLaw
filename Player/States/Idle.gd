@@ -15,6 +15,6 @@ func get_next_state(player):
 		return "Run";
 	if (input.Jump):
 		return "Jump";
-	if (input.Attack):
-		return "Attack";
+	if (input.Aim):
+		return "Aim";
 	return null;

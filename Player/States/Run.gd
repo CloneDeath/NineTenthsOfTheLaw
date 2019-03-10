@@ -1,6 +1,6 @@
 extends State
 
-const run_speed = 48;
+const run_speed = 18;
 
 func update(player, _delta):
 	var input = player.input;
@@ -19,6 +19,6 @@ func get_next_state(player):
 		return "Idle";
 	if (input.Jump):
 		return "Jump";
-	if (input.Attack):
-		return "Attack";
+	if (input.Aim):
+		return "Aim";
 	return null;

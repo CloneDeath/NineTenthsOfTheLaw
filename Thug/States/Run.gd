@@ -1,6 +1,6 @@
 extends State
 
-const run_speed = 48;
+const run_speed = 20;
 
 func update(entity, _delta):
 	var input = entity.input;
