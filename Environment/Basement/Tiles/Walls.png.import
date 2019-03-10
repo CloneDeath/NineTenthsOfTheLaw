@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pots.png-6178edda668370f3928623810d3fa264.stex"
+path="res://.import/Walls.png-0491adc3fa2048db468beefa78c9f900.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Environment/Basement/Pots/pots.png"
-dest_files=[ "res://.import/pots.png-6178edda668370f3928623810d3fa264.stex" ]
+source_file="res://Environment/Basement/Tiles/Walls.png"
+dest_files=[ "res://.import/Walls.png-0491adc3fa2048db468beefa78c9f900.stex" ]
 
 [params]
 
