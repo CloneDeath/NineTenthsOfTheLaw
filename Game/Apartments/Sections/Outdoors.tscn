@@ -17,5 +17,5 @@ tile_data = PoolIntArray( 458752, 7, 4, 458753, 7, 4, 458754, 7, 4, 458755, 7, 4
 position = Vector2( 232, 56 )
 
 [node name="Thug" parent="." instance=ExtResource( 4 )]
-position = Vector2( 440, 56 )
+position = Vector2( 486.742, 54.9767 )
 

@@ -8,6 +8,7 @@ func update(entity, _delta):
 	var input = entity.input;
 	if (input.Jump):
 		entity.allow_fall_through(true);
+	entity.update_facing();
 
 func get_next_state(entity):
 	var input = entity.input;

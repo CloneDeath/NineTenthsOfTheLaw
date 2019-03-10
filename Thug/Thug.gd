@@ -7,14 +7,16 @@ var down_gravity = 200;
 var facing = 1;
 
 var input = AIInput.new();
-onready var brain = get_node("Brain")
 export(int) var starting_direction = 1;
-export(int) var starting_state = 6;
+export(bool) var is_seated = false;
 
 func _ready():
-	input.State = starting_state
+	if (is_seated):
+		input.State = input.SIT
+	else:
+		input.State = input.IDLE
 	facing = starting_direction
-	brain.setup(self);
+	$Brain.setup(self);
 
 func _physics_process(delta):
 	input.update(delta);
@@ -45,8 +47,6 @@ func animation_is_playing():
 	return $Animation.is_playing();
 
 func update_facing():
-	if (input.Left != input.Right):
-		facing = 1 if input.Right else -1;
 	$Sprite.scale.x = facing;
 	$HearingDetector.scale.x = facing;
 	$VisionDetector.scale.x = facing;

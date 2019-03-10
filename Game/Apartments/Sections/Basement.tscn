@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Environment/Apartments/Tiles/Apartments.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="Basement" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 393214, 7, 0, 393215, 7, 0, 983033, 7, 0, 983039, 7, 0, 1048569, 7, 0, 1048575, 7, 0, 1114105, 7, 0, 1114111, 7, 0, 1179641, 7, 0, 1179647, 7, 0, 1245177, 7, 0, 1245183, 7, 0, 1310713, 7, 0, 1310719, 7, 0, 1376249, 7, 0, 1376255, 7, 0, 1441785, 7, 0, 1441791, 7, 0, 1507321, 7, 0, 1507327, 7, 0, 1572857, 7, 0, 1572863, 7, 0, 1638393, 7, 0, 1638399, 7, 0, 1703929, 7, 0, 1703935, 7, 0, 1769465, 7, 0, 1769471, 7, 0, 1835001, 7, 0, 1835007, 7, 0, 1900537, 7, 0, 1900543, 7, 0, 1966073, 7, 0, 1966079, 7, 0, 2031609, 7, 0, 2031615, 7, 0, 2097145, 7, 0, 2162681, 7, 0, 2228217, 7, 0, 2293753, 7, 0, 2359289, 7, 0, 2359293, 7, 0, 2359294, 7, 0, 2359295, 7, 0, 2424825, 7, 0, 2424829, 7, 0, 2424830, 7, 0, 2424831, 7, 0, 2490361, 7, 0, 2490362, 7, 0, 2490363, 7, 0, 2490364, 7, 0, 2490365, 7, 0, 2490366, 7, 0 )
+
+[node name="Foreground" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 1441809, 2, 0, 1507345, 2, 0, 1638398, 6, 0, 1572881, 2, 0, 1638417, 2, 0, 1703953, 2, 0, 1835002, 6, 0, 2031614, 6, 0, 2228218, 6, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 38.8674, 39.357 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+

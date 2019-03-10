@@ -171,7 +171,6 @@ anims/Run = SubResource( 8 )
 anims/Sit = SubResource( 9 )
 
 [node name="StateMachine" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="Idle" type="Node" parent="StateMachine"]
