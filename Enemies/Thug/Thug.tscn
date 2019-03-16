@@ -141,6 +141,7 @@ extents = Vector2( 8, 13 )
 [node name="Thug" type="KinematicBody2D" groups=[
 "enemy",
 ]]
+z_index = 1
 collision_layer = 8
 collision_mask = 3
 script = ExtResource( 1 )
@@ -157,12 +158,12 @@ collision_mask = 3
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -15 )
+position = Vector2( 0, -16 )
 texture = ExtResource( 2 )
-flip_h = true
 hframes = 10
 
 [node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
 anims/Attack = SubResource( 3 )
 anims/Crouch = SubResource( 4 )
 anims/Idle = SubResource( 5 )

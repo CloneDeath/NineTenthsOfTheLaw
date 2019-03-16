@@ -29,16 +29,13 @@ func make_decision():
 		body.input.set_state(default_state)
 
 func turn_toward_player():
-	var relative_position = player.global_position.x - body.global_position.x 
+	var relative_position = player.global_position.x - body.global_position.x
 	if (relative_position > 0):
 		body.facing = 1
 	elif (relative_position < 0):
 		body.facing = -1
 
-
-
 # Sensory Connections:
-
 func _on_HearingDetector_body_entered(body):
 	if body.name == PLAYER_NAME:
 		player = body

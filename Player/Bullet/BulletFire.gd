@@ -18,6 +18,6 @@ func _physics_process(_delta):
 	if (closest != null):
 		$BulletStream.visible = true;
 		disable = true;
-		$BulletStream.points[1].x = global_position.distance_to(closest.global_position) - 8;
+		$BulletStream.points[1].x = global_position.distance_to(closest.global_position) - 6;
 		if (closest.has_method("damage")):
 				closest.damage();

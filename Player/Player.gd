@@ -48,7 +48,7 @@ func do_attack():
 	var aim_angle = $Sprite/Arc.ArcAngle;
 	var angle = rand_range(-aim_angle/2, aim_angle/2);
 	var bullet = bullet_scene.instance();
-	bullet.position.y = -3.5;
+	bullet.position.y = -7.5;
 	bullet.position.x += 8;
 	bullet.rotation = deg2rad(angle);
 	$Sprite.add_child(bullet);
