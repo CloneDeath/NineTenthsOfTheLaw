@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "AIInput",
-"language": "GDScript",
-"path": "res://Enemies/Thug/AIInput.gd"
-}, {
 "base": "Node2D",
 "class": "Arc",
 "language": "GDScript",
@@ -40,7 +35,6 @@ _global_script_classes=[ {
 "path": "res://Engine/StateMachine/StateMachine.gd"
 } ]
 _global_script_class_icons={
-"AIInput": "",
 "Arc": "",
 "Humanoid": "",
 "PlayerInput": "",

@@ -1,24 +1,13 @@
 extends Humanoid
 
-var jump_speed = 175;
-var facing = 1;
-var health = 3;
-
-var input = AIInput.new();
-export(int) var starting_direction = 1;
-export(bool) var is_seated = false;
-
-func _ready():
-	if (is_seated):
-		input.State = input.SIT
-	else:
-		input.State = input.IDLE
-	facing = starting_direction
-	$Brain.setup(self);
+export(int, -1, 1, 2) var facing = 1;
+var health = 8;
+#warning-ignore:unused_class_variable
+var has_weapon = false;
 
 func _physics_process(delta):
-	input.update(delta);
 	update_physics(delta);
+	update_facing();
 
 func allow_fall_through(mode):
 	set_collision_mask_bit(1, !mode);
@@ -36,15 +25,15 @@ func animation_is_playing():
 
 func update_facing():
 	$Sprite.scale.x = facing;
-	$HearingDetector.scale.x = facing;
-	$VisionDetector.scale.x = facing;
-	$AttackRangeDetector.scale.x = facing;
-
-func do_jump():
-	velocity.y = -jump_speed;
 
 func damage():
 	$StateMachine.transition_to_state("Damaged");
 	health -= 1;
 	if (health <= 0):
 		self.queue_free();
+
+func can_see_player():
+	return !$Sprite/Detectors/VisionDetector.get_overlapping_bodies().empty();
+
+func get_player():
+	return get_tree().get_nodes_in_group("player")[0];
