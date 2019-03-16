@@ -18,8 +18,9 @@ func update(entity, delta):
 	entity.set_animation("Idle");
 
 func get_next_state(entity):
-	if (give_up_timer <= 0):
-		return "Smoking";
-
+	if (entity.can_attack_player()):
+		return "Attack";
 	if (entity.can_see_player()):
 		return "Persue";
+	if (give_up_timer <= 0):
+		return "Smoking";

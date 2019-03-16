@@ -1,6 +1,6 @@
 extends State
 
-var run_speed = 18;
+var run_speed = 24;
 
 func update(entity, _delta):
 	var player = entity.get_player();
@@ -9,6 +9,8 @@ func update(entity, _delta):
 	entity.set_animation("Run");
 
 func get_next_state(entity):
+	if (entity.can_attack_player()):
+		return "Attack";
 	if (!entity.can_see_player()):
 		return "Alert";
 	return null;

@@ -35,5 +35,8 @@ func damage():
 func can_see_player():
 	return !$Sprite/Detectors/VisionDetector.get_overlapping_bodies().empty();
 
+func can_attack_player():
+	return !$Sprite/Detectors/AttackRangeDetector.get_overlapping_bodies().empty();
+
 func get_player():
 	return get_tree().get_nodes_in_group("player")[0];
