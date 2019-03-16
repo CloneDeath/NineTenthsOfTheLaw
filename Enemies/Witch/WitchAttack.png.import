@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PossessedThug.png-a96fb03e7e8389bd413e22d6925e0f67.stex"
+path="res://.import/WitchAttack.png-b35785cd7ee35d54f56e74399f5f3673.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PossessedThug/PossessedThug.png"
-dest_files=[ "res://.import/PossessedThug.png-a96fb03e7e8389bd413e22d6925e0f67.stex" ]
+source_file="res://Enemies/Witch/WitchAttack.png"
+dest_files=[ "res://.import/WitchAttack.png-b35785cd7ee35d54f56e74399f5f3673.stex" ]
 
 [params]
 

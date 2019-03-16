@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Thug.png-91236a3d7da6db288e756fd819630b46.stex"
+path="res://.import/PossessedThug.png-784416244daea78cbe72399160565008.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Thug/Thug.png"
-dest_files=[ "res://.import/Thug.png-91236a3d7da6db288e756fd819630b46.stex" ]
+source_file="res://Enemies/PossessedThug/PossessedThug.png"
+dest_files=[ "res://.import/PossessedThug.png-784416244daea78cbe72399160565008.stex" ]
 
 [params]
 

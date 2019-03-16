@@ -13,7 +13,6 @@
 [node name="Level" type="Node2D"]
 
 [node name="Sections" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Outdoors" parent="Sections" instance=ExtResource( 1 )]
 position = Vector2( -536, 320 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WitchAttack.png-05ad9a312350774f60dcfc2128189ce8.stex"
+path="res://.import/TrashCan.png-0550cd5eacda0981e32a4b5ef5892ee0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Witch/WitchAttack.png"
-dest_files=[ "res://.import/WitchAttack.png-05ad9a312350774f60dcfc2128189ce8.stex" ]
+source_file="res://Environment/Outside/TrashCan/TrashCan.png"
+dest_files=[ "res://.import/TrashCan.png-0550cd5eacda0981e32a4b5ef5892ee0.stex" ]
 
 [params]
 

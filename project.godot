@@ -12,12 +12,17 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "AIInput",
 "language": "GDScript",
-"path": "res://Thug/AIInput.gd"
+"path": "res://Enemies/Thug/AIInput.gd"
 }, {
 "base": "Node2D",
 "class": "Arc",
 "language": "GDScript",
 "path": "res://Engine/Shapes/Arc.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Humanoid",
+"language": "GDScript",
+"path": "res://Engine/Humanoid/Humanoid.gd"
 }, {
 "base": "Node",
 "class": "PlayerInput",
@@ -37,6 +42,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "AIInput": "",
 "Arc": "",
+"Humanoid": "",
 "PlayerInput": "",
 "State": "",
 "StateMachine": ""
