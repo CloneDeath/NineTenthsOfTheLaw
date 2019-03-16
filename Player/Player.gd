@@ -8,6 +8,19 @@ var facing = 1;
 
 var input = PlayerInput.new();
 
+var bullet_scene = load("res://Player/Bullet/BulletFire.tscn");
+
+func _ready():
+	disable_aim();
+
+func set_aim_angle(angle):
+	$Sprite/Arc.visible = true;
+	$Sprite/Arc.ArcAngle = angle;
+	$Sprite/Arc.modulate.a = lerp(0.05, 0, angle/90);
+
+func disable_aim():
+	$Sprite/Arc.visible = false;
+
 func _physics_process(delta):
 	input.update(delta);
 	update_physics(delta);
@@ -45,9 +58,10 @@ func do_jump():
 	velocity.y = -jump_speed;
 
 func do_attack():
-	var results = $Sprite/EnemyDetector.get_overlapping_bodies();
-	for body in results:
-		if (body.is_in_group("enemy")):
-			if (body.has_method("damage")):
-				body.damage();
-				return;
+	var aim_angle = $Sprite/Arc.ArcAngle;
+	var angle = rand_range(-aim_angle/2, aim_angle/2);
+	var bullet = bullet_scene.instance();
+	bullet.position.y = -3.5;
+	bullet.position.x += 8;
+	bullet.rotation = deg2rad(angle);
+	$Sprite.add_child(bullet);

@@ -1,16 +1,17 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
-[ext_resource path="res://Engine/StateMachine/StateMachine.gd" type="Script" id=3]
-[ext_resource path="res://Player/States/Idle.gd" type="Script" id=4]
-[ext_resource path="res://Player/States/Run.gd" type="Script" id=5]
-[ext_resource path="res://Player/States/Aim.gd" type="Script" id=6]
-[ext_resource path="res://Player/States/Attack.gd" type="Script" id=7]
-[ext_resource path="res://Player/States/Crouch.gd" type="Script" id=8]
-[ext_resource path="res://Player/States/Damaged.gd" type="Script" id=9]
-[ext_resource path="res://Player/States/InAir.gd" type="Script" id=10]
-[ext_resource path="res://Player/States/Jump.gd" type="Script" id=11]
+[ext_resource path="res://Engine/Shapes/Arc.gd" type="Script" id=3]
+[ext_resource path="res://Engine/StateMachine/StateMachine.gd" type="Script" id=4]
+[ext_resource path="res://Player/States/Idle.gd" type="Script" id=5]
+[ext_resource path="res://Player/States/Run.gd" type="Script" id=6]
+[ext_resource path="res://Player/States/Aim.gd" type="Script" id=7]
+[ext_resource path="res://Player/States/Attack.gd" type="Script" id=8]
+[ext_resource path="res://Player/States/Crouch.gd" type="Script" id=9]
+[ext_resource path="res://Player/States/Damaged.gd" type="Script" id=10]
+[ext_resource path="res://Player/States/InAir.gd" type="Script" id=11]
+[ext_resource path="res://Player/States/Jump.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 11 )
@@ -18,10 +19,10 @@ extents = Vector2( 5, 11 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5, 3 )
 
-[sub_resource type="RayShape2D" id=10]
+[sub_resource type="RayShape2D" id=3]
 length = 85.0
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "Aim"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -36,8 +37,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Attack"
+[sub_resource type="Animation" id=5]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -58,43 +58,12 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "do_attack"
 } ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "Crouch"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 9 ]
-}
-
-[sub_resource type="Animation" id=5]
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -109,10 +78,40 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 9 ]
 }
 
 [sub_resource type="Animation" id=7]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=9]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -141,7 +140,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -182,49 +181,56 @@ hframes = 10
 frame = 8
 
 [node name="EnemyDetector" type="Area2D" parent="Sprite"]
+editor/display_folded = true
 collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/EnemyDetector"]
 position = Vector2( 0, -3.5 )
 rotation = -1.5708
-shape = SubResource( 10 )
+shape = SubResource( 3 )
+
+[node name="Arc" type="Node2D" parent="Sprite"]
+modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 0, -3 )
+script = ExtResource( 3 )
+InnerRadius = 15.0
+OutterRadius = 100.0
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
-anims/Aim = SubResource( 9 )
-anims/Attack = SubResource( 3 )
-anims/Crouch = SubResource( 4 )
-anims/Idle = SubResource( 5 )
-anims/InAir = SubResource( 6 )
-anims/Jump = SubResource( 7 )
-anims/Run = SubResource( 8 )
+anims/Aim = SubResource( 4 )
+anims/Attack = SubResource( 5 )
+anims/Crouch = SubResource( 6 )
+anims/Idle = SubResource( 7 )
+anims/InAir = SubResource( 8 )
+anims/Jump = SubResource( 9 )
+anims/Run = SubResource( 10 )
 
 [node name="StateMachine" type="Node" parent="."]
-editor/display_folded = true
-script = ExtResource( 3 )
-
-[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 4 )
 
-[node name="Run" type="Node" parent="StateMachine"]
+[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
 
-[node name="Aim" type="Node" parent="StateMachine"]
+[node name="Run" type="Node" parent="StateMachine"]
 script = ExtResource( 6 )
 
-[node name="Attack" type="Node" parent="StateMachine"]
+[node name="Aim" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
 
-[node name="Crouch" type="Node" parent="StateMachine"]
+[node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
 
-[node name="Damaged" type="Node" parent="StateMachine"]
+[node name="Crouch" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
 
-[node name="InAir" type="Node" parent="StateMachine"]
+[node name="Damaged" type="Node" parent="StateMachine"]
 script = ExtResource( 10 )
 
-[node name="Jump" type="Node" parent="StateMachine"]
+[node name="InAir" type="Node" parent="StateMachine"]
 script = ExtResource( 11 )
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource( 12 )
 

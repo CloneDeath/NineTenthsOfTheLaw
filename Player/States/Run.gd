@@ -1,6 +1,6 @@
 extends State
 
-const run_speed = 18;
+const run_speed = 36;
 
 func update(player, _delta):
 	var input = player.input;
