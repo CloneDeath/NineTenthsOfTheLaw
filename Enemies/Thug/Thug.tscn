@@ -137,7 +137,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=6]
 resource_name = "Damaged (Weapon)"
 loop = true
 tracks/0/type = "value"
@@ -177,7 +177,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -216,7 +216,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 length = 0.35
 loop = true
 tracks/0/type = "value"
@@ -256,7 +256,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -294,7 +294,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 resource_name = "Smoking"
 length = 6.0
 loop = true
@@ -336,16 +336,16 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Gradient" id=12]
+[sub_resource type="Gradient" id=11]
 colors = PoolColorArray( 0.65098, 0.65098, 0.65098, 1, 0.65098, 0.65098, 0.65098, 0 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 4, 13 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 50, 25 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 25, 25 )
 
 [node name="Thug" type="KinematicBody2D" groups=[
@@ -373,14 +373,13 @@ autoplay = "Idle"
 anims/Attack = SubResource( 3 )
 anims/Crouch = SubResource( 4 )
 "anims/Damaged (No Weapon)" = SubResource( 5 )
-"anims/Damaged (Weapon)" = SubResource( 16 )
-anims/Idle = SubResource( 6 )
-anims/Run = SubResource( 9 )
-anims/Sit = SubResource( 10 )
-anims/Smoking = SubResource( 11 )
+"anims/Damaged (Weapon)" = SubResource( 6 )
+anims/Idle = SubResource( 7 )
+anims/Run = SubResource( 8 )
+anims/Sit = SubResource( 9 )
+anims/Smoking = SubResource( 10 )
 
 [node name="StateMachine" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="Smoking" type="Node" parent="StateMachine"]
@@ -416,7 +415,7 @@ gravity = Vector2( 0, -10 )
 initial_velocity = 5.0
 initial_velocity_random = 0.5
 scale_amount = 0.5
-color_ramp = SubResource( 12 )
+color_ramp = SubResource( 11 )
 
 [node name="CigaretteSmoke" type="CPUParticles2D" parent="Sprite"]
 position = Vector2( 5.52602, -4.75495 )
@@ -427,7 +426,7 @@ gravity = Vector2( 0, -10 )
 initial_velocity = 5.0
 initial_velocity_random = 0.5
 scale_amount = 0.5
-color_ramp = SubResource( 12 )
+color_ramp = SubResource( 11 )
 
 [node name="Detectors" type="Node2D" parent="Sprite"]
 editor/display_folded = true
@@ -440,7 +439,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Detectors/AttackRangeDetector"]
 position = Vector2( 4, -13 )
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="VisionDetector" type="Area2D" parent="Sprite/Detectors"]
 editor/display_folded = true
@@ -450,7 +449,7 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Detectors/VisionDetector"]
 position = Vector2( 50, -25 )
-shape = SubResource( 14 )
+shape = SubResource( 13 )
 
 [node name="HearingDetector" type="Area2D" parent="Sprite/Detectors"]
 editor/display_folded = true
@@ -460,5 +459,5 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Detectors/HearingDetector"]
 position = Vector2( -25, -25 )
-shape = SubResource( 15 )
+shape = SubResource( 14 )
 

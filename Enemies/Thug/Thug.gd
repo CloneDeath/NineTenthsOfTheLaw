@@ -26,6 +26,11 @@ func animation_is_playing():
 func update_facing():
 	$Sprite.scale.x = facing;
 
+func damage_player():
+	var player = get_player();
+	if (player):
+		player.damage();
+
 func damage():
 	$StateMachine.transition_to_state("Damaged");
 	health -= 1;

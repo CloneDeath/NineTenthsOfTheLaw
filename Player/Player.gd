@@ -2,6 +2,7 @@ extends Humanoid
 
 var jump_speed = 175;
 var facing = 1;
+var health = 10;
 
 var input = PlayerInput.new();
 
@@ -9,6 +10,14 @@ var bullet_scene = load("res://Player/Bullet/BulletFire.tscn");
 
 func _ready():
 	disable_aim();
+	
+func damage():
+	$StateMachine.transition_to_state("Damaged");
+	health -= 1
+	$CanvasLayer/Healthbar.update();
+	if health == 0:
+		#TODO: hook into game over
+		pass
 
 func set_aim_angle(angle):
 	$Sprite/Arc.visible = true;
