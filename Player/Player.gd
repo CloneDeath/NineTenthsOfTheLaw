@@ -10,7 +10,7 @@ var bullet_scene = load("res://Player/Bullet/BulletFire.tscn");
 
 func _ready():
 	disable_aim();
-	
+
 func damage():
 	$StateMachine.transition_to_state("Damaged");
 	health -= 1
