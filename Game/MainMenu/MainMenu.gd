@@ -26,4 +26,9 @@ func _process(_delta):
 			$Options/Animation.play("Controls");
 
 func go_to_game():
+	#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Game/Prototype/Prototype.tscn");
+
+func go_to_controls():
+	#warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Game/MainMenu/Controls/Controls.tscn");
