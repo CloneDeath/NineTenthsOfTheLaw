@@ -48,6 +48,10 @@ config/name="Nine Tenths of the Law"
 run/main_scene="res://Game/Prototype/Prototype.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameState="*res://Engine/GameState/GameState.gd"
+
 [display]
 
 window/size/width=170

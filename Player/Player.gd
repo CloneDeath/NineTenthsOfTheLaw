@@ -16,8 +16,7 @@ func damage():
 	health -= 1
 	$CanvasLayer/Healthbar.update();
 	if health == 0:
-		#TODO: hook into game over
-		pass
+		get_tree().change_scene("res://Game/ScoreScreen/ScoreScreen.tscn");
 
 func set_aim_angle(angle):
 	$Sprite/Arc.visible = true;

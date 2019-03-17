@@ -2,6 +2,9 @@ extends Node2D
 
 var selected = 0;
 
+func _ready():
+	GameState.start_fresh();
+
 func _process(_delta):
 	if ($Selection.is_playing()): return;
 
