@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Enemies/Thug/Thug.gd" type="Script" id=1]
 [ext_resource path="res://Engine/StateMachine/StateMachine.gd" type="Script" id=2]
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.3, 0.35, 0.4, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 7, 6, 7, 8, 9, 8 ]
+"values": [ 3, 8, 7, 8, 9, 10, 9 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
@@ -110,7 +110,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 12 ]
+"values": [ 13 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
@@ -150,7 +150,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 13 ]
+"values": [ 14 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
@@ -216,82 +216,6 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=7]
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite/CigaretteSmoke:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=8]
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 4 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite/CigaretteSmoke:emitting")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
 [sub_resource type="Animation" id=9]
 length = 0.35
 loop = true
@@ -305,7 +229,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 3, 4, 5, 4 ]
+"values": [ 3, 4, 5, 6 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
@@ -385,7 +309,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 10, 11 ]
+"values": [ 11, 12 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite/MouthSmoke:emitting")
@@ -416,7 +340,7 @@ tracks/2/keys = {
 colors = PoolColorArray( 0.65098, 0.65098, 0.65098, 1, 0.65098, 0.65098, 0.65098, 0 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 8, 13 )
+extents = Vector2( 4, 13 )
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 50, 25 )
@@ -451,13 +375,12 @@ anims/Crouch = SubResource( 4 )
 "anims/Damaged (No Weapon)" = SubResource( 5 )
 "anims/Damaged (Weapon)" = SubResource( 16 )
 anims/Idle = SubResource( 6 )
-anims/InAir = SubResource( 7 )
-anims/Jump = SubResource( 8 )
 anims/Run = SubResource( 9 )
 anims/Sit = SubResource( 10 )
 anims/Smoking = SubResource( 11 )
 
 [node name="StateMachine" type="Node" parent="."]
+editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="Smoking" type="Node" parent="StateMachine"]
@@ -479,11 +402,10 @@ script = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 0, -16 )
 texture = ExtResource( 9 )
-hframes = 14
-frame = 3
+hframes = 15
+frame = 12
 
 [node name="MouthSmoke" type="CPUParticles2D" parent="Sprite"]
 position = Vector2( 1.0281, -4.62644 )
@@ -498,7 +420,6 @@ color_ramp = SubResource( 12 )
 
 [node name="CigaretteSmoke" type="CPUParticles2D" parent="Sprite"]
 position = Vector2( 5.52602, -4.75495 )
-emitting = false
 amount = 4
 randomness = 0.1
 spread = 10.0
@@ -509,15 +430,16 @@ scale_amount = 0.5
 color_ramp = SubResource( 12 )
 
 [node name="Detectors" type="Node2D" parent="Sprite"]
+editor/display_folded = true
+show_behind_parent = true
 
 [node name="AttackRangeDetector" type="Area2D" parent="Sprite/Detectors"]
-editor/display_folded = true
 position = Vector2( 0, 16 )
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Detectors/AttackRangeDetector"]
-position = Vector2( 8, -13 )
+position = Vector2( 4, -13 )
 shape = SubResource( 13 )
 
 [node name="VisionDetector" type="Area2D" parent="Sprite/Detectors"]

@@ -1,7 +1,7 @@
 extends Humanoid
 
 export(int, -1, 1, 2) var facing = 1;
-var health = 8;
+var health = 5;
 #warning-ignore:unused_class_variable
 var has_weapon = false;
 
