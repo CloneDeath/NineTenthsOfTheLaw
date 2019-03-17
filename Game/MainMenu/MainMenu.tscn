@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game/MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Game/MainMenu/9_10.png" type="Texture" id=2]
@@ -209,6 +209,66 @@ tracks/3/keys = {
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 4 )
 
+[sub_resource type="Animation" id=8]
+resource_name = "Controls"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Options/Controls:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "go_to_game"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Start"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Options/Start:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "go_to_game"
+} ]
+}
+
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -246,7 +306,6 @@ custom_colors/font_color = Color( 0.635294, 0.196078, 0.305882, 1 )
 text = "Law"
 
 [node name="Options" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Animation" type="AnimationPlayer" parent="Options"]
 anims/Controls = SubResource( 6 )
@@ -269,4 +328,8 @@ margin_bottom = 90.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.619608, 0.643137, 0.654902, 1 )
 text = "Controls"
+
+[node name="Selection" type="AnimationPlayer" parent="."]
+anims/Controls = SubResource( 8 )
+anims/Start = SubResource( 7 )
 
